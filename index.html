@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SQL Queries: Library Database</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      padding: 30px;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    .query-block {
+      background-color: #ecf0f1;
+      border-left: 6px solid #3498db;
+      padding: 15px 20px;
+      margin: 20px 0;
+      white-space: pre-wrap;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .label {
+      font-weight: bold;
+      color: #2980b9;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>SQL: Creating Database and Table</h1>
+
+    <div class="label">1. Create a Database named "library":</div>
+    <div class="query-block">
+CREATE DATABASE library;
+    </div>
+
+    <div class="label">2. Delete the "library" Database:</div>
+    <div class="query-block">
+DROP DATABASE library;
+    </div>
+
+    <div class="label">3. Create a Table "book_records":</div>
+    <div class="query-block">
+CREATE TABLE book_records (
+    Book_Library_No INT PRIMARY KEY,
+    Book_Name VARCHAR(100),
+    Author_Name VARCHAR(100),
+    Book_Edition VARCHAR(50),
+    Price DECIMAL(10, 2)
+);
+    </div>
+
+    <div class="label">4. Delete the "book_records" Table:</div>
+    <div class="query-block">
+DROP TABLE book_records;
+    </div>
+  </div>
+
+</body>
+</html>
